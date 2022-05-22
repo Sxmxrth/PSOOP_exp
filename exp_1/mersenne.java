@@ -6,7 +6,7 @@ public class mersenne{
         checkPrime u= new checkPrime();
         Print v= new Print();
         for(int p=2;p<=31;p++){
-            int l=(int)Math.pow(2,p)-1;
+            double l=(double)Math.pow(2,p)-1;
             int x=u.prime(l);
             v.print(x,l);
         }
@@ -14,7 +14,7 @@ public class mersenne{
 }
 
 class checkPrime{
-    public static int prime(int a){
+    public static int prime(double a){
         int r=(int)Math.sqrt(a);
         for(int i=2;i<=r;i++){
             if(a%i==0){
@@ -27,7 +27,7 @@ class checkPrime{
 
 
 class Print{
-    public static void print(int x, int l){
+    public static void print(int x, double l){
         if(x==1){
             System.out.println(l+" is a mersenne number");
         }
