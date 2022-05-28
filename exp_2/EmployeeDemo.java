@@ -3,8 +3,7 @@ import java.util.*;
 class Employee{
     private String empName,empId;
     private float salary;
-
-    Employee(){
+    Employee(){ //constructor
         empName="Samarth";
         empId="E202023";
         salary=15000f;
@@ -33,12 +32,10 @@ class Employee{
         System.out.println(b);
         System.out.println(c);
     }
-
-
 }
 
-public class EmployeeDemo{
-    public static void main(String args[]){
+public class EmployeeDemo{ //driver class
+    public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
         System.out.println("enter the number of employees=");
         int n= sc.nextInt();
@@ -53,15 +50,11 @@ public class EmployeeDemo{
             arr[i].setId(newId);
             arr[i].setSalary(newSal);
 
-
-
             String a=arr[i].getName();
             String b=arr[i].getId();
             float c=arr[i].getSalary();
 
             arr[i].display(a,b,c);
         }
-
-
     }
 }
