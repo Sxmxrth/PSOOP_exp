@@ -57,12 +57,13 @@ public class stuinfo{  //driver class
         s.setpercentage(perc);
 
 
-        System.out.println(s.getName());
-        System.out.println(s.getsid());
-        System.out.println(s.getpercentage());
+        System.out.println("Name= "+s.getName());
+        System.out.println("ID= "+s.getsid());
+        System.out.println("Percentage= "+s.getpercentage());
     }
 
     public static float marks(int n){
+        System.out.print("enter the marks in each subject: ");
         Scanner sc = new Scanner(System.in);
         float c=0,m;
         for(int i=0;i<n;i++){
