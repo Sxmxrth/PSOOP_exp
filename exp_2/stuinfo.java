@@ -60,6 +60,19 @@ public class stuinfo{  //driver class
         System.out.println("Name= "+s.getName());
         System.out.println("ID= "+s.getsid());
         System.out.println("Percentage= "+s.getpercentage());
+
+        if((int)perc>=90){
+            System.out.println("Grade=A");
+        }
+        else if((int)perc>=80 && (int)perc<90){
+            System.out.println("Grade=B");
+        }
+        else if ((int)perc>=70 && (int)perc<80) {
+            System.out.println("Grade=C");
+        }
+        else {
+            System.out.println("Grade=D");
+        }
     }
 
     public static float marks(int n){
