@@ -59,7 +59,7 @@ public class stuinfo{  //driver class
 
         System.out.println("Name= "+s.getName());
         System.out.println("ID= "+s.getsid());
-        System.out.println("Percentage= "+s.getpercentage());
+        System.out.println("Percentage= "+s.getpercentage()+"%");
 
         if((int)perc>=90){
             System.out.println("Grade=A");
