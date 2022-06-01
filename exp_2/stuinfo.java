@@ -3,7 +3,7 @@ class Student{
     private String studName,sid;
     private float percentage;
 
-    Student(){
+    Student(){   //constructor
         studName="Samarth";
         sid="2021600023";
         percentage=98;
@@ -32,12 +32,10 @@ class Student{
     public float getpercentage(){
         return percentage;
     }
-
-
-
 }
 
-public class stuinfo{
+
+public class stuinfo{  //driver class
     public static void main(String args[]){
 
         Scanner sc = new Scanner(System.in);
@@ -66,13 +64,11 @@ public class stuinfo{
 
     public static float marks(int n){
         Scanner sc = new Scanner(System.in);
-        int c=0,m;
+        float c=0,m;
         for(int i=0;i<n;i++){
             m=sc.nextInt();
             c=c+m;
         }
-        float perc=c/n;
-
-        return perc;
+        return c/n;
     }
 }
