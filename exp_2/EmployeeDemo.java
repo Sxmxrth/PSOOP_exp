@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Employee{
+class Employee {
     private String empName,empId;
     private float salary;
     Employee(){ //constructor
