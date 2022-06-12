@@ -7,13 +7,12 @@ public class shopping {
         int n = sc.nextInt();
 
         Cart[] arr = new Cart[n];
-        for (int i = 0; i <n ; i++) {
+        for (int i = 0; i < n; i++) {
             arr[i] = new Cart(n);
-            System.out.println("enter the total number of items in cart of customer "+ (i+1));
+            System.out.println("enter the total number of items in cart of customer " + (i + 1));
             int num_item = sc.nextInt();
             arr[i].store(num_item);
         }
-
     }
 }
 class Cart{
@@ -57,8 +56,5 @@ class Cart{
         System.out.println("total perishable items are "+p);
         System.out.println("total non perishable items are "+np);
         System.out.println("the costliest non perishable item is of "+costliest);
-
     }
-
-
 }
