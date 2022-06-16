@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class movies {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("enter the number of movies:");
+        System.out.print("enter the number of movies: ");
         int n = sc.nextInt();
         Movies[] arr = new Movies[n];
 
@@ -32,7 +32,6 @@ public class movies {
                     arr[j]=arr[j+1];
                     arr[j+1]=temp;
                 }
-
             }
         }
 
