@@ -1,18 +1,17 @@
+import jdk.swing.interop.SwingInterOpUtils;
+
+import java.util.Scanner;
+
 public class production {
     public static void main(String[] args) {
-        Play p1 = new Play();
-        Play p2 = new Play();
-        Play p3 = new Play();
-
-        Musical m1 = new Musical("Samarth","Naman");
-        Musical m2 = new Musical("abc", "xyz");
-
-        System.out.println(m1.getComposer());
-        System.out.println(m1.getLyricist());
-        //Musical m2 = new Musical();
-
-
-
+        Scanner sc= new Scanner(System.in);
+        System.out.print("enter the number of plays: ");
+        int n = sc.nextInt();
+        Play[] arr1 = new Play[n];
+        for (int i = 0; i <n ; i++) {
+            arr1[i] = new Play();
+            arr1[i].play();
+        }
     }
 }
 
@@ -55,6 +54,10 @@ class Play extends Production{
     int performances=0;
     void play(){
         performances++;
+    }
+
+    public String toString(){
+        return super.getTitle() + " " + super.getDirector() + " "+ super.getWriter();
     }
 
 
