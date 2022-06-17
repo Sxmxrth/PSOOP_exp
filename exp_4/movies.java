@@ -34,7 +34,7 @@ public class movies {
                 }
             }
         }
-
+        System.out.println("Name        " + "Type       " + "Hero       " + "Heroine        " + "Budget         "    );
         for (int i = 0; i <n ; i++) {
             arr[i].display();
         }
@@ -52,11 +52,12 @@ class Movies{
         this.budget=budget;
     }
     void display(){
-        System.out.println(name);
-        System.out.println(type);
-        System.out.println(hero);
-        System.out.println(heroine);
-        System.out.println(budget);
+        System.out.print(name+"     ");
+        System.out.print(type+"     ");
+        System.out.print(hero+"     ");
+        System.out.print(heroine+"     ");
+        System.out.print(budget+"     ");
+        System.out.println(" ");
     }
 
 }
