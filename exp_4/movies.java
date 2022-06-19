@@ -24,9 +24,7 @@ public class movies {
         }
         for (int i = 0; i <n ; i++) {
             for (int j = i; j <n-1 ; j++) {
-                String tname = " ",ttype = " ",thero = " " ,theroine = " ";
-                double tbudget = 0;
-                Movies temp = new Movies(tname, ttype, thero, theroine, tbudget);
+                Movies temp;
                 if(arr[j].budget>arr[j+1].budget){
                     temp=arr[j];
                     arr[j]=arr[j+1];

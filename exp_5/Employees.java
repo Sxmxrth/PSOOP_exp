@@ -31,7 +31,23 @@ public class Employees {
             int x = sc.nextInt();
             arr[i].updatedSal(x);
 
+        }
+
+        for (int i = 0; i <n ; i++) {
+            for (int j = i; j <n-1 ; j++) {
+                SalariedEmployee temp;
+                if(arr[j].getEmpSal()>arr[j+1].getEmpSal()){
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+
+            }
+
+        }
+        for (int i = 0; i <n ; i++) {
             arr[i].print(i+1);
+            System.out.println();
 
         }
     }
@@ -82,7 +98,9 @@ class SalariedEmployee extends Employees1{
         if(x==1){
             empSal=empSal+2000;
         }
-
+    }
+    double getEmpSal(){
+        return empSal;
     }
 
     void print(int j) {
