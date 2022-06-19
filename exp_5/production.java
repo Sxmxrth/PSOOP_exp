@@ -8,15 +8,17 @@ public class production {
 
         for (int i = 0; i <3 ; i++) {
             p[i] = new Play("abc", "abc", "abc");
-
-            System.out.print("enter the number of seats: ");
-            int seats = sc.nextInt();
-            p[i].setSeats(seats);
+            p[i].updatePerformances();
 
             System.out.print("enter the Title of the play: ");
             String title = sc.nextLine();
             p[i].setTitle(title);
 
+            System.out.print("enter the number of seats: ");
+            int seats = sc.nextInt();
+            p[i].setSeats(seats);
+
+            sc.skip("\\R");
             System.out.print("enter the Director of the play: ");
             String director = sc.nextLine();
             p[i].setDirector(director);
@@ -29,14 +31,18 @@ public class production {
 
         for (int i = 0; i <2 ; i++) {
             m[i] = new Musical("abc", "abc", "abc");
-
-            System.out.print("enter the number of seats: ");
-            int seats = sc.nextInt();
-            p[i].setSeats(seats);
+            m[i].updatePerformances();
 
             System.out.print("enter the Title of the musical: ");
             String title = sc.nextLine();
             m[i].setTitle(title);
+
+            System.out.print("enter the number of seats: ");
+            int seats = sc.nextInt();
+            m[i].setSeats(seats);
+
+
+            sc.skip("\\R");
 
             System.out.print("enter the Director of the musical: ");
             String director = sc.nextLine();
@@ -55,36 +61,32 @@ public class production {
             m[i].setLyricist(lyricist);
         }
 
-        int t1=0;
+        int t1=0,p1=0;
         for (int i = 0; i <3 ; i++) {
-            t1=t1+(p[i].getSeats()*500);
+            t1=t1+(p[i].getSeats())*500;
+            p1=p1+(p[i].getPerformances());
         }
 
-        int t2=0;
+        int t2=0,p2=0;
         for (int i = 0; i <2 ; i++) {
-            t2=t2+(m[i].getSeats()*800);
+            t2=t2+(m[i].getSeats())*800;
+            p2=p2+(p[i].getPerformances());
         }
 
-        
-
+        System.out.println("the total number of performances are "+ (p1+p2));
+        System.out.println("the total box office collection is "+(t1+t2));
 
     }
 }
 
 class Production{
     private String title, director, writer;
-    private int seats;
 
     Production(String title, String director, String writer){
         this.title=title;
         this.director=director;
         this.writer=writer;
     }
-
-    void setSeats(int newSeats){
-        seats = newSeats;
-    }
-
     void setTitle(String newTitle){
         this.title = newTitle;
     }
@@ -108,16 +110,28 @@ class Production{
     String getWriter(){
         return writer;
     }
-
-    int getSeats(){
-        return seats;
-    }
 }
 
 class Play extends Production{
-    private int performances;
+    private int performances, seats;
     Play(String title, String director, String writer){
         super(title, director, writer);
+    }
+
+    void updatePerformances(){
+        performances++;
+    }
+
+    int getPerformances(){
+        return performances;
+    }
+
+    void setSeats(int newSeats){
+        seats = newSeats;
+    }
+
+    int getSeats(){
+        return seats;
     }
 }
 
@@ -153,5 +167,4 @@ class Musical extends Play{
     int getSeats(){
         return seats;
     }
-
 }
