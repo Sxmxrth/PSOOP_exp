@@ -43,7 +43,7 @@ public class production {
             arr2[i].setComposer(composer);
             System.out.println("enter the name of the lyricist");
             String lyricist = sc.nextLine();
-            arr2[i].setLyricist();
+            arr2[i].setLyricist(lyricist);
 
 
             System.out.println(arr2[i]);
@@ -120,7 +120,7 @@ class Musical extends Play{
     }
 
     public String toString(){
-        return super.getTitle()+" "+ super.getDirector()+" "+ super.getWriter()+" "+setComposer()+" "+ setLyricist();
+        return super.getTitle()+" "+ super.getDirector()+" "+ super.getWriter()+" "+getComposer()+" "+ getLyricist();
     }
 
 }
