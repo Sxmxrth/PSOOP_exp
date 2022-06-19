@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class production {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -65,12 +64,14 @@ public class production {
         for (int i = 0; i <3 ; i++) {
             t1=t1+(p[i].getSeats())*500;
             p1=p1+(p[i].getPerformances());
+            System.out.println(p[i]);
         }
 
         int t2=0,p2=0;
         for (int i = 0; i <2 ; i++) {
             t2=t2+(m[i].getSeats())*800;
             p2=p2+(p[i].getPerformances());
+            System.out.println(m[i]);
         }
 
         System.out.println("the total number of performances are "+ (p1+p2));
@@ -133,6 +134,10 @@ class Play extends Production{
     int getSeats(){
         return seats;
     }
+
+    public String toString(){
+        return getTitle()+" "+getDirector()+" "+getWriter();
+    }
 }
 
 class Musical extends Play{
@@ -166,5 +171,9 @@ class Musical extends Play{
 
     int getSeats(){
         return seats;
+    }
+
+    public String toString(){
+        return getTitle()+" "+getDirector()+" "+getWriter()+" "+getComposer()+" "+getLyricist();
     }
 }
