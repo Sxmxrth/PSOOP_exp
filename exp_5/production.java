@@ -9,6 +9,10 @@ public class production {
         for (int i = 0; i <3 ; i++) {
             p[i] = new Play("abc", "abc", "abc");
 
+            System.out.print("enter the number of seats: ");
+            int seats = sc.nextInt();
+            p[i].setSeats(seats);
+
             System.out.print("enter the Title of the play: ");
             String title = sc.nextLine();
             p[i].setTitle(title);
@@ -17,12 +21,53 @@ public class production {
             String director = sc.nextLine();
             p[i].setDirector(director);
 
-            System.out.println("enter the Writer of the play: ");
+            System.out.print("enter the Writer of the play: ");
             String writer = sc.nextLine();
             p[i].setWriter(writer);
 
-            
         }
+
+        for (int i = 0; i <2 ; i++) {
+            m[i] = new Musical("abc", "abc", "abc");
+
+            System.out.print("enter the number of seats: ");
+            int seats = sc.nextInt();
+            p[i].setSeats(seats);
+
+            System.out.print("enter the Title of the musical: ");
+            String title = sc.nextLine();
+            m[i].setTitle(title);
+
+            System.out.print("enter the Director of the musical: ");
+            String director = sc.nextLine();
+            m[i].setDirector(director);
+
+            System.out.print("enter the Writer of the musical: ");
+            String writer = sc.nextLine();
+            m[i].setWriter(writer);
+
+            System.out.print("enter the name of the composer: ");
+            String composer = sc.nextLine();
+            m[i].setComposer(composer);
+
+            System.out.print("enter the name of the lyricist: ");
+            String lyricist = sc.nextLine();
+            m[i].setLyricist(lyricist);
+        }
+
+        int t1=0;
+        for (int i = 0; i <3 ; i++) {
+            t1=t1+(p[i].getSeats()*500);
+        }
+
+        int t2=0;
+        for (int i = 0; i <2 ; i++) {
+            t2=t2+(m[i].getSeats()*800);
+        }
+
+        
+
+
     }
 }
 
