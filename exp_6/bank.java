@@ -67,9 +67,7 @@ public class bank {
                 else {
                     System.out.println("Conditions not met.");
                 }
-
                 break;
-
         }
     }
 }
