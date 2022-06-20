@@ -1,6 +1,45 @@
+import java.util.Scanner;
+
 public class bank {
     public static void main(String[] args) {
-        
+        Scanner sc = new Scanner(System.in);
+        System.out.println("1.Axis");
+        System.out.println("2.ICICI");
+        System.out.println("3.SBI");
+        System.out.print("enter your choice: ");
+        int n = sc.nextInt();
+        switch (n){
+            case 1:
+                Axis a = new Axis();
+                System.out.print("Enter the amount put in bank: ");
+                double p1 = sc.nextDouble();
+                System.out.print("Enter the number of days: ");
+                int n1 = sc.nextInt();
+                System.out.println("The interest gained is "+ a.get_rate_of_interest(p1,n1));
+                System.out.println("The total amount in bank is "+(p1+a.get_rate_of_interest(p1,n1)));
+                break;
+
+            case 2:
+                Icici i = new Icici();
+                System.out.print("Enter the amount put in bank: ");
+                double p2 = sc.nextDouble();
+                System.out.print("Enter the number of days: ");
+                int n2 = sc.nextInt();
+                System.out.println("The interest gained is "+ i.get_rate_of_interest(p2,n2));
+                System.out.println("The total amount in bank is "+(p2+i.get_rate_of_interest(p2,n2)));
+                break;
+
+            case 3:
+                Sbi s = new Sbi();
+                System.out.print("Enter the amount put in bank: ");
+                double p3 = sc.nextDouble();
+                System.out.print("Enter the number of days: ");
+                int n3 = sc.nextInt();
+                System.out.println("The interest gained is "+ s.get_rate_of_interest(p3,n3));
+                System.out.println("The total amount in bank is "+(p3+s.get_rate_of_interest(p3,n3)));
+                break;
+                
+        }
     }
 }
 
