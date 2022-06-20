@@ -38,7 +38,7 @@ public class bank {
                 System.out.println("The interest gained is "+ s.get_rate_of_interest(p3,n3));
                 System.out.println("The total amount in bank is "+(p3+s.get_rate_of_interest(p3,n3)));
                 break;
-                
+
         }
     }
 }
@@ -46,6 +46,13 @@ public class bank {
 class Bank{
     double get_rate_of_interest(double p, int n){
         return (p*0.02*n)/365;
+    }
+
+    double withdraw(double pr, double amount){
+        if(amount>=500 && amount<=(pr-500)){
+            return pr-amount;
+        }
+        return 0;
     }
 }
 
@@ -65,6 +72,13 @@ class Axis extends Bank{
         }
         return (p*0.10*n)/365;
     }
+
+    double withdrawn(double pr, double amount){
+        if(amount>=600 && amount<=(pr-600)){
+            return pr-amount;
+        }
+        return 0;
+    }
 }
 
 class Icici extends Bank{
@@ -83,6 +97,13 @@ class Icici extends Bank{
         }
         return (p*0.09*n)/365;
     }
+
+    double withdrawn(double pr, double amount){
+        if(amount>=400 && amount<=(pr-400)){
+            return pr-amount;
+        }
+        return 0;
+    }
 }
 
 class Sbi extends Bank{
@@ -100,5 +121,12 @@ class Sbi extends Bank{
             return (p*0.08*n)/365;
         }
         return (p*0.11*n)/365;
+    }
+
+    double withdrawn(double pr, double amount){
+        if(amount>=1000 && amount<=(pr-1000)){
+            return pr-amount;
+        }
+        return 0;
     }
 }
