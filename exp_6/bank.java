@@ -16,7 +16,17 @@ public class bank {
                 System.out.print("Enter the number of days: ");
                 int n1 = sc.nextInt();
                 System.out.println("The interest gained is "+ a.get_rate_of_interest(p1,n1));
-                System.out.println("The total amount in bank is "+(p1+a.get_rate_of_interest(p1,n1)));
+                p1 = p1 + a.get_rate_of_interest(p1,n1);
+                System.out.println("The total amount in bank is "+p1);
+
+                System.out.print("enter amount to be withdrawn: ");
+                double amount1 = sc.nextDouble();
+                if(a.withdrawn(p1,amount1)!=0){
+                    System.out.println("the amount left in the bank is "+a.withdrawn(p1,amount1));
+                }
+                else {
+                    System.out.println("Conditions not met.");
+                }
                 break;
 
             case 2:
@@ -26,7 +36,17 @@ public class bank {
                 System.out.print("Enter the number of days: ");
                 int n2 = sc.nextInt();
                 System.out.println("The interest gained is "+ i.get_rate_of_interest(p2,n2));
-                System.out.println("The total amount in bank is "+(p2+i.get_rate_of_interest(p2,n2)));
+                p2 = p2 + i.get_rate_of_interest(p2,n2);
+                System.out.println("The total amount in bank is "+p2);
+
+                System.out.print("enter amount to be withdrawn: ");
+                double amount2 = sc.nextDouble();
+                if(i.withdrawn(p2,amount2)!=0){
+                    System.out.println("the amount left in the bank is "+i.withdrawn(p2,amount2));
+                }
+                else {
+                    System.out.println("Conditions not met.");
+                }
                 break;
 
             case 3:
@@ -36,7 +56,18 @@ public class bank {
                 System.out.print("Enter the number of days: ");
                 int n3 = sc.nextInt();
                 System.out.println("The interest gained is "+ s.get_rate_of_interest(p3,n3));
-                System.out.println("The total amount in bank is "+(p3+s.get_rate_of_interest(p3,n3)));
+                p3 = p3 + s.get_rate_of_interest(p3,n3);
+                System.out.println("The total amount in bank is "+p3);
+
+                System.out.print("enter amount to be withdrawn: ");
+                double amount3 = sc.nextDouble();
+                if(s.withdrawn(p3,amount3)!=0){
+                    System.out.println("the amount left in the bank is "+s.withdrawn(p3,amount3));
+                }
+                else {
+                    System.out.println("Conditions not met.");
+                }
+
                 break;
 
         }
@@ -48,7 +79,7 @@ class Bank{
         return (p*0.02*n)/365;
     }
 
-    double withdraw(double pr, double amount){
+    double withdrawn(double pr, double amount){
         if(amount>=500 && amount<=(pr-500)){
             return pr-amount;
         }
