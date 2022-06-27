@@ -8,7 +8,7 @@ public class bank {
         System.out.println("3.SBI");
         System.out.print("enter your choice: ");
         int n = sc.nextInt();
-        switch (n){
+        switch(n){
             case 1:
                 Axis a = new Axis();
                 System.out.print("Enter the amount put in bank: ");
