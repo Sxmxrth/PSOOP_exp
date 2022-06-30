@@ -72,6 +72,7 @@ class A extends Marks{
         for (int i = 0; i <4 ; i++) {
             System.out.println(subjects[i] + "      " +  marks[i]);
         }
+        System.out.println("Percentage is "+percentage);
         System.out.println();
     }
 }
@@ -106,6 +107,7 @@ class B extends Marks{
         for (int i = 0; i <3 ; i++) {
             System.out.println(subjects[i] + "      " +  marks[i]);
         }
+        System.out.println("Percentage is "+percentage);
         System.out.println();
     }
 }
