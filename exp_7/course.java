@@ -47,7 +47,7 @@ public class course{
                 case 1:
                     Comps t1;
                     for(int j =0; j<c1; j++){
-                        for(int l =j; l<c1-1; l++){
+                        for(int l =0; l<c1-j; l++){
                             if((c[l].year).compareTo(c[l+1].year)>0){
                                 t1=c[l+1];
                                 c[l+1]=c[l];
@@ -64,7 +64,7 @@ public class course{
                 case 2:
                     IT t2;
                     for(int j =0; j<c2; j++){
-                        for(int l =j; l<c2-1; l++){
+                        for(int l =0; l<c2-j; l++){
                             if((i[l].year).compareTo(i[l+1].year)>0){
                                 t2=i[l+1];
                                 i[l+1]=i[l];

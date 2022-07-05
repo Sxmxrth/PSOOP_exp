@@ -18,10 +18,10 @@ public class interfaces{
                     double r = sc.nextDouble();
                     System.out.print("enter the height of the cylinder: ");
                     double h = sc.nextDouble();
-
                     System.out.println("Surface Area is: "+c.getArea(r,h,1));
                     System.out.println("Volume is: "+ c.getVolume(r,h,1));
                     break;
+
                 case 2:
                     Cuboid co = new Cuboid();
                     System.out.print("enter the length of Cuboid: ");
@@ -30,26 +30,29 @@ public class interfaces{
                     double b = sc.nextDouble();
                     System.out.print("enter the height of Cuboid: ");
                     double h1 = sc.nextDouble();
-
                     System.out.println("Surface Area is: "+co.getArea(l,b,h1));
                     System.out.println("Volume is: "+ co.getVolume(l,b,h1));
                     break;
+
                 case 3:
                     Cube cu = new Cube();
                     System.out.print("enter the side of Cube: ");
                     double a = sc.nextDouble();
-
-
                     System.out.println("Surface Area is: "+cu.getArea(a,1,1));
                     System.out.println("Volume is: "+ cu.getVolume(a,1,1));
                     break;
+
+                default:
+                    System.out.println("enter a valid choice: ");
+                    break;
             }
+
             System.out.print("enter 0 to exit, else any key to continue:");
             int x = sc.nextInt();
             if(x==0){
                 break;
-            }
 
+            }
         } while(true);
     }
 }
