@@ -51,7 +51,6 @@ public class interfaces{
             int x = sc.nextInt();
             if(x==0){
                 break;
-
             }
         } while(true);
     }

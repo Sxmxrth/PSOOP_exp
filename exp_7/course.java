@@ -14,7 +14,7 @@ public class course{
             System.out.print("enter batch code: ");
             int x = sc.nextInt();
 
-            if(x== 1){
+            if(x == 1){
                 sc.skip("\\R");
                 System.out.print("enter name: ");
                 String name = sc.nextLine();
@@ -41,7 +41,7 @@ public class course{
             System.out.println("1. Comps");
             System.out.println("2. IT");
             System.out.print("enter choice: ");
-            int y =sc.nextInt();
+            int y = sc.nextInt();
 
             switch(y){
                 case 1:
