@@ -4,10 +4,7 @@ public class cricket{
         Scanner sc = new Scanner(System.in);
         Cricketer[] c = new Cricketer[3];
         for(int i=0; i<3; i++){
-
-
             System.out.print("Enter name: ");
-
             String name = sc.nextLine();
             System.out.print("Enter Runs Hit: ");
             double runs_hit = sc.nextDouble();
@@ -19,6 +16,7 @@ public class cricket{
             c[i] = new Cricketer(name, runs_hit, innings_count, not_out_count);
             c[i].get_avg();
         }
+
         Cricketer temp;
         for(int i=0; i<3; i++){
             for(int j=0; j<2-i; j++){
@@ -58,10 +56,7 @@ public class cricket{
             if(x==0){
                 break;
             }
-
-
         }while(true);
-
     }
 }
 
@@ -76,21 +71,13 @@ class Cricketer{
     }
 
     public void get_avg(){
-        try{
-
-            batting_avg = (int)runs_hit /(int) (innings_count - not_out_count);
-
+        try {
+            batting_avg = (int)runs_hit / (int)(innings_count - not_out_count);
         }
         catch(ArithmeticException e){
 
-
             System.out.println("cannot divide by 0");
+            batting_avg = runs_hit/innings_count;
         }
-        finally{
-
-            batting_avg = runs_hit;
-
-        }
-
     }
 }
