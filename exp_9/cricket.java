@@ -50,7 +50,6 @@ public class cricket{
                 System.out.println(" The index is incorrect ");
             }
 
-
             System.out.print("enter 0 to exit, 1 to continue: ");
             int x = sc.nextInt();
             if(x==0){
